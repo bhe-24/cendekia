@@ -1,5 +1,6 @@
 <?php
-require_once 'config/database.php';
+// Menggunakan __DIR__ untuk rute absolut yang tidak akan gagal di Vercel
+require_once __DIR__ . '/config/database.php';
 
 try {
     // 1. Membuat tabel cerita
