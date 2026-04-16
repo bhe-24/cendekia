@@ -1,16 +1,17 @@
 {
   "functions": {
-    "*.php": {
-      "runtime": "vercel-php@0.6.0"
-    },
-    "dashboard/**/*.php": {
-      "runtime": "vercel-php@0.6.0"
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.9.0"
     }
   },
-  "routes": [
-    {
-      "src": "/dashboard",
-      "dest": "/dashboard/index.php"
+  "rewrites": [
+    { 
+      "source": "/dashboard", 
+      "destination": "/api/dashboard/index.php" 
+    },
+    { 
+      "source": "/", 
+      "destination": "/api/index.php" 
     }
   ]
 }
